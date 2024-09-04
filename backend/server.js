@@ -7,8 +7,9 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Enable CORS for requests
-app.use(cors());
+app.use(cors({
+  origin: 'https://https://file-sharing-app-4dbj.vercel.app/' // Replace with your actual frontend URL
+}));
 
 // Set up storage for uploaded files
 const storage = multer.diskStorage({
